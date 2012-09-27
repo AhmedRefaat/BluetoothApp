@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <title>BluetoothApp</title>
+        
+        <link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css" />
+        <link rel="stylesheet" href="css/my.css" />
+        
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.1.1.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/cordova-2.0.0.js"></script>      
+  		<script type="text/javascript" charset="utf-8" src="js/bluetooth.js"></script>
+        <script type="text/javascript" src="js/my.js"></script>
+        <script type="text/javascript" src="js/LocalNotification.js"></script>
+        <!--<script type="text/javascript" src="js/statusbarnotification.js"></script>-->
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+    <body>
+        <div data-role="page" data-theme="a" id="home">
+            
+            <div data-theme="a" data-role="header">
+                <h2>Bluetooth App</h2>
+            </div>
+            
+            <div data-role="content" style="padding: 15px">
+                
+                <div class="ui-grid-b">
+                    <div class="ui-block-a"></div>
+                    <div class="ui-block-b">
+                        <div data-role="fieldcontain">
+                            <fieldset data-role="controlgroup">
+                                <select name="toggleswitch5" id="toggleswitch5" data-theme="b" data-role="slider">
+                                    <option value="off">Off</option>
+                                    <option value="on">On</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="ui-block-c text-align-right"><img id="img_loader" src="images/ajax-loader.gif" /></div>
+                </div>
+                
+                <div id="devices_list">
+                    <div class="device_item">sample item</div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+		window.addEventListener('load', function () 
+		{
+		    document.addEventListener('deviceready', function () 
+		    {
+		        initApp();
+		    }, false);
+		}, false);
+        </script>
+    </body>
+</html>
